@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Header from './components/Header'
-import bg from './assets/bg.png';
 import Hero from './sections/HeroSection';
 import AboutMeSection from './sections/AboutMeSection';
 import EducationTimeline from './sections/MyEducationSection';
