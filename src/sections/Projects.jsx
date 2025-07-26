@@ -4,82 +4,29 @@ import { ExternalLink, Github, Award, Calendar, MapPin } from 'lucide-react';
 const ProjectsComponent = () => {
     const projects = [
         {
-            title: "CoinPilot",
-            subtitle: "Finance Tracker App",
-            description: "A comprehensive financial management application built with MERN stack, featuring expense tracking, budget management, and financial insights to help users manage their money effectively.",
+            title: "AI Mock Interview",
+            subtitle: "AI assistant for Interview Preparation",
+            description: "An AI-powered mock interview platform with role-based question generation, real-time feedback, performance tracking, and Clerk authentication for personalized, structured preparation.",
             tech: "MERN Stack",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
-            githubUrl: "https://github.com/Kuladeep-Reddy-C/CoinPilot-Frontend",
-            liveUrl: "https://coinpilot-frontend.onrender.com/",
+            videoUrl: "",
+            githubUrl: "https://github.com/VELURIPAVANVIGNESH/AI-MOCK-INTERVIEW",
+            liveUrl: "https://ai-mock-interview-qsvj.onrender.com",
             category: "Full Stack",
             hasLive: true
         },
         {
-            title: "TaskForge",
-            subtitle: "Project Management Platform",
-            description: "An innovative project management solution with intuitive task tracking, team collaboration features, and advanced analytics. Built for modern teams seeking efficient workflow management.",
-            tech: "MERN Stack",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
-            githubUrl: "https://github.com/Kuladeep-Reddy-C/TaskForge-Frontend",
-            liveUrl: "https://taskforge-frontend-fn9j.onrender.com/",
-            category: "Full Stack",
-            hasLive: true
-        },
-        {
-            title: "Canteen Management System",
-            subtitle: "Mobile Application",
-            description: "A React Native mobile app streamlining canteen operations with order management, menu updates, and real-time notifications for both customers and staff.",
-            tech: "React Native",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
-            githubUrl: "https://github.com/Kuladeep-Reddy-C/React-Native-Clerk-Auth",
-            category: "Mobile",
-            hasLive: false
-        },
-        {
-            title: "Lift Door Safety System",
+            title: "Autonomous Car Project",
             subtitle: "IoT Solution",
-            description: "An Arduino-based safety system ensuring elevator door security with sensor integration, emergency protocols, and real-time monitoring capabilities.",
-            tech: "Arduino",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+            description: "A C++-based autonomous vehicle prototype using ultrasonic sensors and Arduino to detect obstacles, navigate paths, and support manual override via serial interface.",
+            tech: "Arduino, C++",
+            videoUrl: "/project1.mp4",
             githubUrl: "https://github.com/username/lift-safety-system",
             category: "IoT",
             hasLive: false
         },
-        {
-            title: "Luxury Car Showcase",
-            subtitle: "Premium Vehicle Website",
-            description: "An elegant frontend showcase for luxury vehicles featuring stunning visuals, smooth animations, and intuitive navigation designed during 2nd semester.",
-            tech: "HTML/CSS/JS",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
-            githubUrl: "https://github.com/Kuladeep-Reddy-C/SEM-2-Project",
-            liveUrl: "https://kuladeep-reddy-c.github.io/SEM-2-Project/new-home.html",
-            category: "Frontend",
-            hasLive: true
-        },
-        {
-            title: "Smart Appointment Booking",
-            subtitle: "Calendar Integration",
-            description: "A seamless appointment booking system integrated with Google Calendar API, featuring automated scheduling, reminders, and conflict resolution.",
-            tech: "Google Calendar API",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
-            githubUrl: "https://github.com/Kuladeep-Reddy-C/Appointment-Booking",
-            liveUrl: "https://appointment-booking-1-3irb.onrender.com/",
-            category: "Integration",
-            hasLive: true
-        },
-        {
-            title: "Influencer Performance Monitor",
-            subtitle: "Analytics Dashboard",
-            description: "A comprehensive analytics platform tracking influencer performance metrics, engagement rates, and campaign effectiveness across multiple social media platforms.",
-            tech: "React & Analytics APIs",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
-            githubUrl: "https://github.com/Kuladeep-Reddy-C/TrendPulse",
-            category: "Analytics",
-            hasLive: false
-        }
     ];
 
-    
+
     return (
         <div id='projects' className="min-h-screen bg-black text-white py-16 px-8">
             <div className="max-w-7xl mx-auto">

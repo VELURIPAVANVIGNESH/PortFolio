@@ -36,13 +36,13 @@ const HeroSection = () => {
 
                             {/* Name */}
                             <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                                Kuladeep Reddy C
+                                Pavan Vignesh
                             </h1>
 
                             {/* Typewriter Title */}
                             <h2 className="text-green-500 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 sm:mb-8 min-h-[3rem] sm:min-h-[4rem] lg:min-h-[5rem]">
                                 <Typewriter
-                                    words={['Web Developer', 'App Developer', 'ML Engineer', 'F1 Enthusiast']}
+                                    words={['Web Developer', 'Portrait Sketching', 'ML Engineer', 'F1 Enthusiast']}
                                     loop={0}
                                     cursor
                                     cursorStyle="|"
@@ -61,7 +61,7 @@ const HeroSection = () => {
                                 <p>
                                     Specializing in{' '}
                                     <span className="text-green-500 font-semibold">modern web technologies</span> like ReactJS and Node.js, and{' '}
-                                    <span className="text-green-500 font-semibold">AI/ML solutions</span> with projects in finance tracking and performance monitoring.
+                                    <span className="text-green-500 font-semibold">AI/ML solutions</span> with projects in AI Mock Interview and performance monitoring.
                                 </p>
                                 <p className="hidden sm:block">
                                     When not coding, I enjoy analyzing the thrills of{' '}
@@ -71,7 +71,7 @@ const HeroSection = () => {
 
                             {/* Buttons */}
                             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-                                <a href="/Kuladeep_Resume.pdf" download="Kuladeep_Reddy_Resume.pdf">
+                                <a href="/myResume.pdf" download="pavan_vignesh_resume.pdf">
                                     <button className="bg-green-500 text-white px-6 sm:px-8 py-3 rounded-full font-semibold hover:bg-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 text-sm sm:text-base">
                                         My Resume
                                         <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,14 +101,14 @@ const HeroSection = () => {
                                 {/* Profile Image Container - Responsive sizes */}
                                 <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden shadow-2xl">
                                     <img
-                                        src="/myImg.png"
+                                        src="/myImg.jpg"
                                         alt="Kuladeep Reddy C"
                                         className="w-full h-full object-cover object-center"
                                     />
                                 </div>
 
                                 {/* Glowing Effect */}
-                                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-500/20 via-green-500/20 to-green-500/20 blur-xl animate-pulse"></div>
+                                {/* <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-500/20 via-green-500/20 to-green-500/20 blur-xl animate-pulse"></div> */}
                             </div>
                         </div>
                     </div>

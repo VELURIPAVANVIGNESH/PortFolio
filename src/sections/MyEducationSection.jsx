@@ -9,25 +9,25 @@ const EducationTimeline = () => {
             id: 1,
             year: "2020-2021",
             degree: "SSC",
-            institution: "Sri Chaitanya Childrens Academy",
+            institution: "Sri Chaitanya Techno School",
             type: "Secondary School Certificate",
             score: "100.0%",
             scoreType: "Percentage",
             icon: <BookOpen className="w-5 h-5" />,
             description: "Completed secondary education with perfect score",
-            achievement: "Perfect Score Achievement | Won National Level Math Olympiad"
+            achievement: "Perfect Score Achievement | Chatting Expert with Girls"
         },
         {
             id: 2,
             year: "2021-2023",
             degree: "Intermediate (PCM)",
-            institution: "BVK Junior College",
+            institution: "Sri Chaitanya Junior College",
             type: "BIEAP - Physics, Chemistry & Mathematics",
-            score: "98.3%",
+            score: "90.5%",
             scoreType: "Percentage",
             icon: <Award className="w-5 h-5" />,
             description: "Specialized in Physics, Chemistry & Mathematics stream",
-            achievement: "JEE Main: 99.42%ile | JEE Adv: CRL 14800"
+            achievement: "JEE Main: 90.58%ile"
         },
         {
             id: 3,
@@ -35,11 +35,11 @@ const EducationTimeline = () => {
             degree: "B.Tech CSE",
             institution: "Amrita Vishwa Vidyapeetham",
             type: "Bachelor of Technology",
-            score: "8.5 CPI",
+            score: "6.6 CPI",
             scoreType: "CGPA",
             icon: <GraduationCap className="w-5 h-5" />,
             description: "Pursuing Computer Science & Engineering with focus on modern technologies",
-            achievement: "Finalist In 3 National Level Hackathons"
+            achievement: "Winner In 1 National Level Hackathons"
         }
     ];
 
@@ -175,24 +175,24 @@ const EducationTimeline = () => {
                         <div className="absolute inset-x-0 bottom-0 h-0 group-hover:h-[30%] bg-gradient-to-t from-green-500/40 via-emerald-500/20 to-transparent rounded-xl transition-all duration-600 ease-in-out origin-bottom"></div>
                         <div className="absolute inset-x-0 bottom-0 h-0 group-hover:h-[20%] bg-gradient-to-t from-green-500/20 via-emerald-500/10 to-transparent rounded-xl transition-all duration-800 ease-in-out origin-bottom delay-100"></div>
                         <div className="relative z-10">
-                            <div className="text-3xl font-bold text-green-500 mb-2 group-hover:scale-110 transition-transform">8.5</div>
-                            <div className="text-gray-400 text-sm">Current CPI</div>
+                            <div className="text-3xl font-bold text-green-500 mb-2 group-hover:scale-110 transition-transform">6.6</div>
+                            <div className="text-gray-400 text-sm">Current CGPA</div>
                         </div>
                     </div>
                     <div className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-4 border border-gray-800 group relative overflow-hidden text-center">
                         <div className="absolute inset-x-0 bottom-0 h-0 group-hover:h-[30%] bg-gradient-to-t from-green-500/40 via-emerald-500/20 to-transparent rounded-xl transition-all duration-600 ease-in-out origin-bottom"></div>
                         <div className="absolute inset-x-0 bottom-0 h-0 group-hover:h-[20%] bg-gradient-to-t from-green-500/20 via-emerald-500/10 to-transparent rounded-xl transition-all duration-800 ease-in-out origin-bottom delay-100"></div>
                         <div className="relative z-10">
-                            <div className="text-3xl font-bold text-green-500 mb-2 group-hover:scale-110 transition-transform">99.42</div>
+                            <div className="text-3xl font-bold text-green-500 mb-2 group-hover:scale-110 transition-transform">7</div>
+                            <div className="text-gray-400 text-sm">Hacathons</div>
+                        </div>
+                    </div>
+                    <div className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-4 border border-gray-800 group relative overflow-hidden text-center">
+                        <div className="absolute inset-x-0 bottom-0 h-0 group-hover:h-[30%] bg-gradient-to-t from-green-500/40 via-emerald-500/20 to-transparent rounded-xl transition-all duration-600 ease-in-out origin-bottom"></div>
+                        <div className="absolute inset-x-0 bottom-0 h-0 group-hover:h-[20%] bg-gradient-to-t from-green-500/20 via-emerald-500/10 to-transparent rounded-xl transition-all duration-800 ease-in-out origin-bottom delay-100"></div>
+                        <div className="relative z-10">
+                            <div className="text-3xl font-bold text-green-500 mb-2 group-hover:scale-110 transition-transform">90.58</div>
                             <div className="text-gray-400 text-sm">JEE Main %ile</div>
-                        </div>
-                    </div>
-                    <div className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-4 border border-gray-800 group relative overflow-hidden text-center">
-                        <div className="absolute inset-x-0 bottom-0 h-0 group-hover:h-[30%] bg-gradient-to-t from-green-500/40 via-emerald-500/20 to-transparent rounded-xl transition-all duration-600 ease-in-out origin-bottom"></div>
-                        <div className="absolute inset-x-0 bottom-0 h-0 group-hover:h-[20%] bg-gradient-to-t from-green-500/20 via-emerald-500/10 to-transparent rounded-xl transition-all duration-800 ease-in-out origin-bottom delay-100"></div>
-                        <div className="relative z-10">
-                            <div className="text-3xl font-bold text-green-500 mb-2 group-hover:scale-110 transition-transform">14800</div>
-                            <div className="text-gray-400 text-sm">JEE Adv CRL</div>
                         </div>
                     </div>
                     <div className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-4 border border-gray-800 group relative overflow-hidden text-center">

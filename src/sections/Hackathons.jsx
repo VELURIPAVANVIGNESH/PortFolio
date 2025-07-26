@@ -7,21 +7,21 @@ const HackathonComponent = () => {
 
     const hackathons = [
         {
-            title: "GeoGuide AI",
-            subtitle: "Travel Platform with AI",
-            position: "Top 5 Finalist",
+            title: "AI Based Hiring System for HRs",
+            subtitle: "Hiring System with AI",
+            position: "2",
             event: "ABHISARGA'25, IIIT Sri City",
             date: "Feb 2025",
-            description: "Developed a travel platform with ReactJS, Node.js, Google Maps API, and OpenWeather API for personalized recommendations. Achieved Top 5 for API integration.",
-            tech: "ReactJS, Node.js, Google Maps API, OpenWeather API",
-            award: "🏆 Top 5",
+            description: "Developed a AI powered Hiring software with ReactJS, Node.js. Integrated LeetCode based API and Gemini for dynamic question Generator",
+            tech: "ReactJS, Node.js, Rest API",
+            award: "🏅 1st Runner Up",
             images: [
-                "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?w=800&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=400&fit=crop"
+                "/tech/abhisarga/1.png",
+                "/tech/abhisarga/2.png",
+                "/tech/abhisarga/3.jpg"
             ],
-            githubUrl: "https://github.com/Kuladeep-Reddy-C/GeoGuide",
-            category: "AI/Travel"
+            githubUrl: "https://github.com/VELURIPAVANVIGNESH/AI-MOCK-INTERVIEW",
+            category: "AI/Hiring"
         },
         {
             title: "MediSphere",
@@ -31,17 +31,17 @@ const HackathonComponent = () => {
             date: "Mar 2025",
             description: "Built a healthcare system using MERN stack and Clerk, with dashboards for doctors and patients. Secured Top 8 for authentication.",
             tech: "MERN Stack, Clerk",
-            award: "🏅 Top 8",
+            award: "🏆 Top 3",
             images: [
-                "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1582560469781-1965b9af903d?w=800&h=400&fit=crop"
+                "/tech/medisphere/1.png",
+                "/tech/medisphere/2.png",
+                "/tech/medisphere/3.jpg"
             ],
-            githubUrl: "https://github.com/username/medisphere",
+            githubUrl: "https://github.com/Kuladeep-Reddy-C/medisphere",
             category: "Healthcare"
         },
         {
-            title: "Resort Booking Website",
+            title: "Ai Mock Interview",
             subtitle: "Hospitality Platform",
             position: "2nd Place",
             event: "DevX mini-Hackathon",
@@ -50,9 +50,9 @@ const HackathonComponent = () => {
             tech: "ReactJS, Tailwind CSS",
             award: "🥈 2nd Place",
             images: [
-                "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=400&fit=crop"
+                "/tech/scalar/1.jpg",
+                "/tech/scalar/2.jpg",
+                "/tech/scalar/3.jpg"
             ],
             githubUrl: "https://github.com/username/resort-booking",
             category: "UI/UX"
