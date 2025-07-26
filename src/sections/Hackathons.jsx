@@ -95,7 +95,7 @@ const HackathonComponent = () => {
                 <div className="text-center mb-16">
                     <h1 className="text-5xl font-bold mb-4">
                         <span className="text-white">Hackathon </span>
-                        <span className="text-green-400">Achievements</span>
+                        <span className="text-blue-400">Achievements</span>
                     </h1>
                     <p className="text-gray-400 text-lg max-w-4xl mx-auto leading-relaxed">
                         Competing in hackathons has sharpened my problem-solving skills and ability to deliver under pressure. Here are my recent achievements showcasing innovation and excellence.
@@ -107,19 +107,19 @@ const HackathonComponent = () => {
                     {/* Navigation Arrows */}
                     <button
                         onClick={prevSlide}
-                        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/80 hover:bg-black text-green-400 p-3 rounded-full transition-all duration-300 hover:scale-110"
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/80 hover:bg-black text-blue-400 p-3 rounded-full transition-all duration-300 hover:scale-110"
                     >
                         <ChevronLeft size={24} />
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/80 hover:bg-black text-green-400 p-3 rounded-full transition-all duration-300 hover:scale-110"
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/80 hover:bg-black text-blue-400 p-3 rounded-full transition-all duration-300 hover:scale-110"
                     >
                         <ChevronRight size={24} />
                     </button>
 
                     {/* Main Card */}
-                    <div className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-green-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-green-500/20">
+                    <div className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20">
                         {/* Image Slideshow Section */}
                         <div className="relative h-96 overflow-hidden">
                             {/* Image Navigation */}
@@ -153,10 +153,10 @@ const HackathonComponent = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
 
                             {/* Badges */}
-                            <div className="absolute top-4 right-4 bg-green-500 text-black px-4 py-2 rounded-full text-sm font-semibold">
+                            <div className="absolute top-4 right-4 bg-blue-500 text-black px-4 py-2 rounded-full text-sm font-semibold">
                                 {currentHackathon.category}
                             </div>
-                            <div className="absolute top-4 left-4 bg-black/70 text-green-400 px-4 py-2 rounded-full text-sm font-semibold">
+                            <div className="absolute top-4 left-4 bg-black/70 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold">
                                 {currentHackathon.award}
                             </div>
 
@@ -166,7 +166,7 @@ const HackathonComponent = () => {
                                     <button
                                         key={index}
                                         onClick={() => setImageIndex(index)}
-                                        className={`w-3 h-3 rounded-full transition-all duration-300 ${index === imageIndex ? 'bg-green-400' : 'bg-white/50'
+                                        className={`w-3 h-3 rounded-full transition-all duration-300 ${index === imageIndex ? 'bg-blue-400' : 'bg-white/50'
                                             }`}
                                     />
                                 ))}
@@ -179,12 +179,12 @@ const HackathonComponent = () => {
                                 {/* Left Column - Main Info */}
                                 <div>
                                     <h2 className="text-3xl font-bold text-white mb-3">{currentHackathon.title}</h2>
-                                    <h3 className="text-xl text-green-400 font-semibold mb-4">{currentHackathon.subtitle}</h3>
+                                    <h3 className="text-xl text-blue-400 font-semibold mb-4">{currentHackathon.subtitle}</h3>
 
                                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 space-y-3 sm:space-y-0">
                                         <div className="flex items-center space-x-2">
-                                            <MapPin className="text-green-400" size={18} />
-                                            <span className="text-green-400 font-semibold">{currentHackathon.event}</span>
+                                            <MapPin className="text-blue-400" size={18} />
+                                            <span className="text-blue-400 font-semibold">{currentHackathon.event}</span>
                                         </div>
                                         <div className="flex items-center space-x-2 text-gray-400">
                                             <Calendar size={18} />
@@ -200,7 +200,7 @@ const HackathonComponent = () => {
                                     <div>
                                         <h4 className="text-lg font-semibold text-white mb-3">Technology Stack</h4>
                                         <div className="bg-gray-800 px-4 py-2 rounded-lg mb-6">
-                                            <span className="text-green-400">{currentHackathon.tech}</span>
+                                            <span className="text-blue-400">{currentHackathon.tech}</span>
                                         </div>
                                     </div>
 
@@ -209,7 +209,7 @@ const HackathonComponent = () => {
                                             href={currentHackathon.githubUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-black font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
+                                            className="flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 text-black font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
                                         >
                                             <Github size={20} />
                                             <span>View Code</span>
@@ -229,7 +229,7 @@ const HackathonComponent = () => {
                                     setCurrentSlide(index);
                                     setImageIndex(0);
                                 }}
-                                className={`w-4 h-4 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-green-400' : 'bg-gray-600'
+                                className={`w-4 h-4 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-blue-400' : 'bg-gray-600'
                                     }`}
                             />
                         ))}

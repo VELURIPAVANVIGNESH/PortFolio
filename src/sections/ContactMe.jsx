@@ -69,7 +69,7 @@ const ContactComponent = () => {
                         <div className="space-y-6">
                             <div className="flex items-center space-x-4">
                                 <div className="bg-gray-800 p-3 rounded-lg">
-                                    <Mail className="text-green-500" size={24} />
+                                    <Mail className="text-blue-500" size={24} />
                                 </div>
                                 <div>
                                     <p className="text-gray-400 text-sm">E-mail:</p>
@@ -79,7 +79,7 @@ const ContactComponent = () => {
 
                             <div className="flex items-center space-x-4">
                                 <div className="bg-gray-800 p-3 rounded-lg">
-                                    <MapPin className="text-green-500" size={24} />
+                                    <MapPin className="text-blue-500" size={24} />
                                 </div>
                                 <div>
                                     <p className="text-gray-400 text-sm">Location:</p>
@@ -105,7 +105,7 @@ const ContactComponent = () => {
                                         value={formData.name}
                                         onChange={handleInputChange}
                                         placeholder="Your Name"
-                                        className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all duration-300"
+                                        className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300"
                                         required
                                     />
                                 </div>
@@ -116,7 +116,7 @@ const ContactComponent = () => {
                                         value={formData.phone}
                                         onChange={handleInputChange}
                                         placeholder="Phone Number"
-                                        className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all duration-300"
+                                        className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300"
                                         required
                                     />
                                 </div>
@@ -130,7 +130,7 @@ const ContactComponent = () => {
                                         value={formData.email}
                                         onChange={handleInputChange}
                                         placeholder="Your Email"
-                                        className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all duration-300"
+                                        className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300"
                                         required
                                     />
                                 </div>
@@ -141,7 +141,7 @@ const ContactComponent = () => {
                                         value={formData.subject}
                                         onChange={handleInputChange}
                                         placeholder="Subject"
-                                        className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all duration-300"
+                                        className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300"
                                         required
                                     />
                                 </div>
@@ -154,7 +154,7 @@ const ContactComponent = () => {
                                     onChange={handleInputChange}
                                     placeholder="Your Message"
                                     rows={6}
-                                    className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all duration-300 resize-none"
+                                    className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300 resize-none"
                                     required
                                 ></textarea>
                             </div>
@@ -163,7 +163,7 @@ const ContactComponent = () => {
                                 <button
                                     type="button"
                                     onClick={handleSubmit}
-                                    className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 flex items-center justify-center space-x-2"
+                                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 flex items-center justify-center space-x-2"
                                 >
                                     <span>LesssGooo</span>
                                     <Send size={20} />
@@ -175,8 +175,8 @@ const ContactComponent = () => {
 
                 {/* Background decoration */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute -top-40 -right-40 w-80 h-80 bg-green-500/5 rounded-full blur-3xl"></div>
-                    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-green-600/5 rounded-full blur-3xl"></div>
+                    <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
+                    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-600/5 rounded-full blur-3xl"></div>
                 </div>
             </div>
         </div>

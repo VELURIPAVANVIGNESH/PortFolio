@@ -8,7 +8,7 @@ const ProjectsComponent = () => {
             subtitle: "AI assistant for Interview Preparation",
             description: "An AI-powered mock interview platform with role-based question generation, real-time feedback, performance tracking, and Clerk authentication for personalized, structured preparation.",
             tech: "MERN Stack",
-            videoUrl: "",
+            videoUrl: " ",
             githubUrl: "https://github.com/VELURIPAVANVIGNESH/AI-MOCK-INTERVIEW",
             liveUrl: "https://ai-mock-interview-qsvj.onrender.com",
             category: "Full Stack",
@@ -19,7 +19,7 @@ const ProjectsComponent = () => {
             subtitle: "IoT Solution",
             description: "A C++-based autonomous vehicle prototype using ultrasonic sensors and Arduino to detect obstacles, navigate paths, and support manual override via serial interface.",
             tech: "Arduino, C++",
-            videoUrl: "/project1.mp4",
+            videoUrl: "/project2.mp4",
             githubUrl: "https://github.com/username/lift-safety-system",
             category: "IoT",
             hasLive: false
@@ -34,7 +34,7 @@ const ProjectsComponent = () => {
                 <div className="text-center mb-16">
                     <h1 className="text-5xl font-bold mb-4">
                         <span className="text-white">Turning Problems into </span>
-                        <span className="text-green-400">Solutions</span>
+                        <span className="text-blue-400">Solutions</span>
                     </h1>
                     <p className="text-gray-400 text-lg max-w-4xl mx-auto leading-relaxed">
                         Instead of searching for cheap solutions, I focus on solving real problems I encounter daily. Every challenge gets an innovative twist, creating functional solutions that refine, solve, and execute them. Here are some of my recent projects.
@@ -46,7 +46,7 @@ const ProjectsComponent = () => {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20 group"
+                            className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20 group"
                         >
                             <div className="relative overflow-hidden">
                                 <video
@@ -57,14 +57,14 @@ const ProjectsComponent = () => {
                                     className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <div className="absolute top-4 right-4 bg-green-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                                <div className="absolute top-4 right-4 bg-blue-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
                                     {project.category}
                                 </div>
                             </div>
 
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                                <h4 className="text-green-400 font-semibold mb-3">{project.subtitle}</h4>
+                                <h4 className="text-blue-400 font-semibold mb-3">{project.subtitle}</h4>
                                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">{project.description}</p>
 
                                 <div className="flex items-center justify-between">
@@ -76,7 +76,7 @@ const ProjectsComponent = () => {
                                             href={project.githubUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-green-400 hover:text-green-300 transition-colors"
+                                            className="text-blue-400 hover:text-blue-300 transition-colors"
                                         >
                                             <Github size={18} />
                                         </a>
@@ -85,7 +85,7 @@ const ProjectsComponent = () => {
                                                 href={project.liveUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-green-400 hover:text-green-300 transition-colors"
+                                                className="text-blue-400 hover:text-blue-300 transition-colors"
                                             >
                                                 <ExternalLink size={18} />
                                             </a>

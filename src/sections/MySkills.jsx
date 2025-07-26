@@ -4,7 +4,7 @@ const SkillsComponent = () => {
     const skills = [
         {
             category: "Web Development",
-            color: "from-green-500 to-green-600",
+            color: "from-blue-500 to-blue-600",
             technologies: [
                 { img: "/tech/icons8-javascript-48.png" },
                 { img: "/tech/icons8-react-24.png" },
@@ -16,7 +16,7 @@ const SkillsComponent = () => {
         },
         {
             category: "App Development",
-            color: "from-green-400 to-green-500",
+            color: "from-blue-400 to-blue-500",
             technologies: [
                 { img: "/tech/icons8-flutter-24.png" },
                 { img: "/tech/icons8-expo-50.png" },
@@ -25,7 +25,7 @@ const SkillsComponent = () => {
         },
         {
             category: "Tools",
-            color: "from-green-600 to-green-700",
+            color: "from-blue-600 to-blue-700",
             technologies: [
                 { img: "/tech/icons8-visual-studio-48.png" },
                 { img: "/tech/icons8-postman-api-64.png" },
@@ -36,7 +36,7 @@ const SkillsComponent = () => {
         },
         {
             category: "Deployment Tools",
-            color: "from-green-500 to-green-700",
+            color: "from-blue-500 to-blue-700",
             technologies: [
                 { img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAgVBMVEUAAAD////i4uL7+/vNzc319fV9fX00NDTW1tYmJiavr69qampLS0v4+Pje3t7Jycm1tbXu7u5CQkI5OTkWFhaQkJBTU1NNTU3n5+cgICAtLS2jo6NGRkaBgYEoKCiysrJbW1sNDQ2cnJy9vb1wcHCJiYnCwsJ2dnZhYWGXl5cZGRkCAMacAAAJfUlEQVR4nO2diWKiMBCGOQRRtF5V61m1brfd93/AlXXZBkggyfzDsfV/AOETmMkcmTju/y6n6Rtg14Ow+3oQdl8Pwu7rQdh91UAYeNHkdRnGp9F83k+0mK9Xcfg5nERewH95VsJgFu0O8Wh7duQ6H9fxYRfNWDn5CHu7cK9Cy4HuD7se233wEPYuKy02USsmSjyhN40Hxnh3DT6mHvx+wIQv9nh3beLXF+wtIQn9t+uGhPcX8vruA+8KR+hdtgC8u7ZL3NsKIvQnexjeXSvUg4QQznZovkSj6QxxcwDCYDhn4Es0vwDWAmTCMRtfov5w3DThsM/Il2jx1ijhxHzpYq591BihF9bAd9M5pPgOAuGQtnox0WZo7zqsCZ9OtfElOj3VTbislS/R0vIx2hF6dViYvNZ2FseKsMYvUNTmtSbCcU0mVKLQwv+bEz5x+/gy9c0NjjHhtEG+RFNmQv+zYUDH+TS0qWaEQXOf4JdCs4DDiHA8apruj/ZG9saE0Fs0zfZXRvbGgLCHy8NQtTVIreoT9o5Ncwk66iNqE0bPTVNl9Ky9hNMljJpGKkgXUZOw164nmOhZ80XVI2zVN5hK81vUInxqjxUVtdVKbugQjptca5dpoeP6NQgDjoQ2RmuNBZwGYRvWoiqF1cvwasLmo4kyfdIJm44Hq1QZL1YRPjVNUKmqVXgFYdBWM/qlfoW1qSBss5VJFVIIX5u+ey0N7QkjROMBvwala5tSwnXT966pVZlXLCOsvzZhq6UdYfsdxZdKXIaa0G+i+mKrkw3hsOm7NpLanioJvWbqS7ZS21MlIZuvX+o1nZpK6fdVhD2e+3Ccq3vi+eGJISFb1Otxpe1WZoRsMVPiuX7w/LTC2MgJx1wVikXSjDf7xfLbW3nWRk7I5inu//OO88e1CNmiwtXfv5nHE82lkaKU8MJyAzelOdw3np+XPkQZ4Yyrn/Lnv0t8sPz+XNZyKyNkM6RfXfhMHmOnR+hz1bJ/CBc5sFxhLwkUJYTvLBd3nF+iIXjhWTNJFjYSQq6oKZvZ5PEYex1Cj+XShVSDz+ORiiFGkZArd5F/gXg8RjHLXyAcM9UKr4VLsxi0bcHWFAi57ExxvxaPxyi09hcIryzXlWbDWILswruSJ3zhSQIPZEvGF44PYpN/WfKETHl82WKDaf2bL7flCWOOizpreVKaJYaJywk9npdU1RfCYdbyWbccIc+i+6erEsf6Kfea5gh5ohp1zr3HcLXca5ol9FmC77K6yU/85QZlhBx/qeOU1b44PvzsV58lZFnwl5doGS6ZXZtmCTk+fFlUKijAp0yyueEMoQ+/mKPOtqdiiDEy/2mGsAbLJhE+xsh8iBlChm/iXN0hia81Z9aIGUKG9FCZp0gF9xiZSptIyNBmKY0p8vLQHcgj8aoi4Qyf/yr3FKnQ7Y9nMTMsEuKD7rkWIP7lEfv4RUK8oXnXI4R7DNHUiIRwQ6OOKXLywSv+g4IQHf0+62/AAn8gohMWCAN0G5uOp0iF9RiiMRUI0UZ7YzJeBpsBE3diCIQR2FmY7diFZqXOgjEVCCfIazjOwggQXJYVlvsCIbg9QddTpIJ6DGE2gUCIXVl8GAK6/gl4dcHICYTQJPvGfKQMMsYQ1t4CIdQdmngKhr9YcIgCITKF0bcZRAb0GEJHrUCIdPjyOkWVcMXZkZQQaK7XVoDuGBZjCEGNQAjs1qvKPqkEKyrICXGFoOrsk0I+ytr1eQnP9gPWUNk+ZkIbT5EKFKPyEi4oIytnmHvgJdTLPqmEiTHkhCBvMaJNqwwgJl0IbPCE1JnVEI8h9xaY+oFxTJEXJCsllJ8EwhPgl51f1vMN/wmRa5ATQrztj+IdGwvgMeSxBSJ4IXmKVIDqgjw+RKzsaZ4iFd1jCIVugRDQ8HUizzX+I59s1oV/Gptrs40p8iJ7DHmujW7Dil2ytiJ6DEW+1CM3Q9I9RSpijHGU57wDqsunxBR50XbwreV1C6pDhHiKVLSslKL2RPW0GE+RilSuVdUPaTXgFfbEH59SCVPVgGllSvQ5OJQ6hqqOT1otaVe0tWXvMZS9GCRjCj7/xqXMotyr+mkoa29ETJGXteUTDQ2qr+2I9BSprD2Guq/NfiWB9RSpbP9xdW+idX8pKKbIy7fMSqn7S60LbKiYIi87j1HSI2wbeuJiirxONreTLe1BevXxx8GRbqisV99u2EH1dEZ7WcQYpfstrMILFk+RyiJoLd0zY5U+4PEUqcw9Rvm+J4vpUBX7Kagy3sGX73Oh7z/kO0H0LtMEWcX+Q/PXFB9T5GXopPOH0VD3AZ9x2SeVzMLWyn3Apnu5kdknlYxCnsq93IYLpbNXg3om5q/QElkg9Ns5f11XxXFYxbkY7Z5uXaXiV1PfbJN6pDPbhG/cXg2STPmUEIL7vWuVpPVaNiequw9RNrtBNuuLaSReDZJtgKh1Xhu3tOe1dWzA7pekncnyuYndfIjyCfs1z75klcHsS7ZxWKxSnDqjmEHbxYeo2EmmmiPcpXHld40UJCrCzi1slM3l9c/zZpLxPO9vMJO9Y8bGYq4+qKO2Jp3USdvvfL7FNzijpDtneKhG6lcSdsWebkr3WZUSduS8p/JD5csJO+H3SWd2fYNz1zrgMohn532D8w/b7hUBZ1i6fputTYWV0SPET+bBaY85S5bv1Bmq+qDzgBE7MVi01aqwaxH+/+dyf4Oz1dmOTSFId6yBLiGhr5xFz9pzG7QJ2/Utan6DZoRurz0WdWvQamZA6D61JdBYmLTsmhACJ+SQZDa1wYjQDdqwRg3NtpCZEbp+8/1En4b9rIaEzceLhXNk4ITN2pu++bYAc0J33NzHGFrszbEgdN3XZs5cH5SnDZGEbtREULyy27hiR+j69WdvbLuRLQlvBudUK9/Jup/cmtD1h/VVNQaEXSv2hK7rhVxHW+cUUraOUQhvFqeOheqKtruRRui6b9x5uD51WxWV0B0POdc48yF5/y2Z8BZwXLhaGedDwCQKAKHrzqYc51Hud5CNjRDCm+t4R9f896jd0yDCm7wlLo+zveC2FuMIkwd5RSzJN9c35KZNJOFNL68xDXIQT8EzRMCEN3nTD9vl3DGe4je+4wkT9Xbmhmd14dlvy0OYqLc77PXWred1uOPbTcxHeFMwi3aHeH1UgT5vR/FhF82wE6ZyYiW8K/CiyfAzjFer+aKfaD4fneJwOZ1EHivbXTUQNqwHYff1IOy+HoTd14Ow+/r/CX8D6zeXMC+zW1wAAAAASUVORK5CYII=" }, // Assuming you download this
                 { img: "https://avatars.githubusercontent.com/u/7892489?s=200&v=4" }, // Assuming you download this
@@ -59,12 +59,12 @@ const SkillsComponent = () => {
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-10">
-                    <h1 className="text-4xl font-bold text-green-400 mb-4">MY SKILLS</h1>
-                    <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-xl p-4 border border-green-500/30">
-                        <p className="text-green-300 text-lg italic font-medium">
+                    <h1 className="text-4xl font-bold text-blue-400 mb-4">MY SKILLS</h1>
+                    <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-xl p-4 border border-blue-500/30">
+                        <p className="text-blue-300 text-lg italic font-medium">
                             "{randomQuote}"
                         </p>
-                        <p className="text-green-400 mt-2 font-semibold">- Naruto Uzumaki</p>
+                        <p className="text-blue-400 mt-2 font-semibold">- Naruto Uzumaki</p>
                     </div>
                 </div>
 
@@ -72,8 +72,8 @@ const SkillsComponent = () => {
                 <div className="grid lg:grid-cols-3 gap-6">
                     {/* Left Side - Uniqueness */}
                     <div className="lg:col-span-1">
-                        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-4 border border-green-500/30 h-full">
-                            <h2 className="text-2xl font-bold text-green-400 mb-3">What Makes Me Unique</h2>
+                        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-4 border border-blue-500/30 h-full">
+                            <h2 className="text-2xl font-bold text-blue-400 mb-3">What Makes Me Unique</h2>
                             <div className="space-y-2 text-gray-300 text-lg">
                                 <p>I blend creativity with technical skills to solve challenges innovatively.</p>
                                 <p>Self-motivated, I adapt quickly to new tech and deliver impactful solutions.</p>
@@ -86,7 +86,7 @@ const SkillsComponent = () => {
                         {skills.map((skill, index) => (
                             <div
                                 key={index}
-                                className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-4 border border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
+                                className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-4 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
                             >
                                 <div className="flex items-center mb-3">
                                     <h3 className="text-lg font-bold text-white">{skill.category}</h3>
@@ -95,7 +95,7 @@ const SkillsComponent = () => {
                                     {skill.technologies.map((tech, techIndex) => (
                                         <div
                                             key={techIndex}
-                                            className="flex items-center justify-center p-2 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-green-500/50 hover:bg-green-500/10 transition-all duration-200"
+                                            className="flex items-center justify-center p-2 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-200"
                                         >
                                             <img src={tech.img} alt={`${skill.category} tech ${techIndex}`} className="w-6 h-6" />
                                         </div>
@@ -114,20 +114,20 @@ const SkillsComponent = () => {
 
                 {/* Bottom Stats */}
                 <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div className="text-center p-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl border border-green-500/30 hover:border-green-400/50 transition-all duration-300">
-                        <div className="text-2xl font-bold text-green-400 mb-1">2+</div>
+                    <div className="text-center p-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300">
+                        <div className="text-2xl font-bold text-blue-400 mb-1">2+</div>
                         <div className="text-gray-300 text-sm">Years Experience</div>
                     </div>
-                    <div className="text-center p-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl border border-green-500/30 hover:border-green-400/50 transition-all duration-300">
-                        <div className="text-2xl font-bold text-green-400 mb-1">10+</div>
+                    <div className="text-center p-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300">
+                        <div className="text-2xl font-bold text-blue-400 mb-1">10+</div>
                         <div className="text-gray-300 text-sm">Projects Completed</div>
                     </div>
-                    <div className="text-center p-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl border border-green-500/30 hover:border-green-400/50 transition-all duration-300">
-                        <div className="text-2xl font-bold text-green-400 mb-1">20+</div>
+                    <div className="text-center p-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300">
+                        <div className="text-2xl font-bold text-blue-400 mb-1">20+</div>
                         <div className="text-gray-300 text-sm">Technologies Mastered</div>
                     </div>
-                    <div className="text-center p-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl border border-green-500/30 hover:border-green-400/50 transition-all duration-300">
-                        <div className="text-2xl font-bold text-green-400 mb-1">100%</div>
+                    <div className="text-center p-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300">
+                        <div className="text-2xl font-bold text-blue-400 mb-1">100%</div>
                         <div className="text-gray-300 text-sm">Dedication</div>
                     </div>
                 </div>
