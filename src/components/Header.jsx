@@ -44,9 +44,6 @@ const Header = () => {
                 <a href="https://www.instagram.com/pavan_vignesh/" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors duration-300">
                     <FaInstagram />
                 </a>
-                <a href="https://leetcode.com/u/KULADEEP_REDDY_CHAPPIDI/" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors duration-300">
-                    <SiLeetcode />
-                </a>
             </div>
 
             {/* Right: Nav Links */}
