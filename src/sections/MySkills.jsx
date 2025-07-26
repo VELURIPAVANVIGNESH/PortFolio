@@ -101,12 +101,12 @@ const SkillsComponent = () => {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="mt-3 h-1 bg-gray-700 rounded-full overflow-hidden">
+                                {/* <div className="mt-3 h-1 bg-gray-700 rounded-full overflow-hidden">
                                     <div
                                         className={`h-full bg-gradient-to-r ${skill.color} transform -translate-x-full hover:translate-x-0 transition-transform duration-700`}
                                         style={{ animation: `slideIn 2s ease-out ${index * 0.2}s forwards` }}
                                     ></div>
-                                </div>
+                                </div> */}
                             </div>
                         ))}
                     </div>

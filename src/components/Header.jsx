@@ -27,7 +27,7 @@ const Header = () => {
                 className={`text-2xl font-extrabold tracking-wide text-white transition-all duration-700 delay-300 ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
                     }`}
             >
-                Kuladeep Reddy<span className="text-green-400"> C</span>
+                Pavan Vignesh<span className="text-green-400"> V</span>
             </div>
 
             {/* Center: Social Icons */}
@@ -35,13 +35,13 @@ const Header = () => {
                 className={`hidden md:flex gap-4 text-xl text-white transition-all duration-700 delay-500 ${isLoaded ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'
                     }`}
             >
-                <a href="https://github.com/Kuladeep-Reddy-C" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors duration-300">
+                <a href="https://github.com/VELURIPAVANVIGNESH" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors duration-300">
                     <FaGithub />
                 </a>
-                <a href="https://www.linkedin.com/in/kuladeep-reddy-c/" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors duration-300">
+                <a href="https://www.linkedin.com/in/pavan-vignesh-75a171297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors duration-300">
                     <FaLinkedin />
                 </a>
-                <a href="https://www.instagram.com/kuladeep_reddy_000/" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors duration-300">
+                <a href="https://www.instagram.com/pavan_vignesh/" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors duration-300">
                     <FaInstagram />
                 </a>
                 <a href="https://leetcode.com/u/KULADEEP_REDDY_CHAPPIDI/" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors duration-300">

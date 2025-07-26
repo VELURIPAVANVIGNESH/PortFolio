@@ -73,7 +73,7 @@ const ContactComponent = () => {
                                 </div>
                                 <div>
                                     <p className="text-gray-400 text-sm">E-mail:</p>
-                                    <p className="text-white font-medium">ckuladeepreddy2006@gmail.com</p>
+                                    <p className="text-white font-medium">pavanvigneshveluri@gmail.com</p>
                                 </div>
                             </div>
 
@@ -83,7 +83,7 @@ const ContactComponent = () => {
                                 </div>
                                 <div>
                                     <p className="text-gray-400 text-sm">Location:</p>
-                                    <p className="text-white font-medium">Punganur</p>
+                                    <p className="text-white font-medium">Anantapur</p>
                                     <p className="text-gray-400 text-sm">(Home)</p>
                                 </div>
                             </div>
