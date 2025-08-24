@@ -10,6 +10,11 @@ const ContactComponent = () => {
         subject: '',
         message: ''
     });
+    const [submissionState, setSubmissionState] = useState({
+        submitting: false,
+        succeeded: false,
+        errors: null
+    });
     const containerRef = useRef(null);
 
     useEffect(() => {
@@ -37,11 +42,77 @@ const ContactComponent = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        // Handle form submission here
+        setSubmissionState({ submitting: true, succeeded: false, errors: null });
+
+        try {
+            // Replace "xnnbazww" with your actual Formspree form ID
+            const response = await fetch('https://formspree.io/f/xnnbazww', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setSubmissionState({ submitting: false, succeeded: true, errors: null });
+                setFormData({
+                    name: '',
+                    phone: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                });
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            setSubmissionState({ 
+                submitting: false, 
+                succeeded: false, 
+                errors: 'Failed to send message. Please try again.' 
+            });
+        }
     };
+
+    const resetForm = () => {
+        setSubmissionState({ submitting: false, succeeded: false, errors: null });
+        setFormData({
+            name: '',
+            phone: '',
+            email: '',
+            subject: '',
+            message: ''
+        });
+    };
+
+    // Success state component
+    if (submissionState.succeeded) {
+        return (
+            <div 
+                id='contact'
+                className="min-h-screen bg-black text-white py-16 px-8 relative overflow-hidden flex items-center justify-center"
+            >
+                <div className="text-center space-y-8">
+                    <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto animate-pulse">
+                        <Send className="text-white" size={32} />
+                    </div>
+                    <div>
+                        <h2 className="text-4xl font-bold text-white mb-4">Message Sent Successfully!</h2>
+                        <p className="text-gray-400 text-lg">Thanks for reaching out! I'll get back to you soon.</p>
+                    </div>
+                    <button 
+                        onClick={resetForm} 
+                        className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                        Send Another Message
+                    </button>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div 
@@ -97,6 +168,12 @@ const ContactComponent = () => {
                         </div>
 
                         <div className="space-y-6">
+                            {submissionState.errors && (
+                                <div className="bg-red-500/20 border border-red-500 rounded-lg p-4">
+                                    <p className="text-red-400 text-sm">{submissionState.errors}</p>
+                                </div>
+                            )}
+
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <input
@@ -117,7 +194,6 @@ const ContactComponent = () => {
                                         onChange={handleInputChange}
                                         placeholder="Phone Number"
                                         className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300"
-                                        required
                                     />
                                 </div>
                             </div>
@@ -163,10 +239,11 @@ const ContactComponent = () => {
                                 <button
                                     type="button"
                                     onClick={handleSubmit}
-                                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 flex items-center justify-center space-x-2"
+                                    disabled={submissionState.submitting}
+                                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                                 >
-                                    <span>LesssGooo</span>
-                                    <Send size={20} />
+                                    <span>{submissionState.submitting ? 'Sending...' : 'LesssGooo'}</span>
+                                    <Send size={20} className={submissionState.submitting ? 'animate-pulse' : ''} />
                                 </button>
                             </div>
                         </div>
