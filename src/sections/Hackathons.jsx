@@ -1,245 +1,270 @@
-import React, { useState, useEffect } from 'react';
-import { ExternalLink, Github, Calendar, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import {
+  Github,
+  Calendar,
+  MapPin,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 const HackathonComponent = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [imageIndex, setImageIndex] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [imageIndex, setImageIndex] = useState(0);
 
-    const hackathons = [
-        {
-            title: "AI Based Hiring System for HRs",
-            subtitle: "Hiring System with AI",
-            position: "2",
-            event: "ABHISARGA'25, IIIT Sri City",
-            date: "Feb 2025",
-            description: "Developed a AI powered Hiring software with ReactJS, Node.js. Integrated LeetCode based API and Gemini for dynamic question Generator",
-            tech: "ReactJS, Node.js, Rest API",
-            award: "🏅 1st Runner Up",
-            images: [
-                "/tech/abhisarga/1.png",
-                "/tech/abhisarga/2.png",
-                "/tech/abhisarga/3.jpg"
-            ],
-            githubUrl: "https://github.com/VELURIPAVANVIGNESH/AI-MOCK-INTERVIEW",
-            category: "AI/Hiring"
-        },
-        {
-            title: "MediSphere",
-            subtitle: "Healthcare Management System",
-            position: "Top 8",
-            event: "Technova Hackathon",
-            date: "Mar 2025",
-            description: "Built a healthcare system using MERN stack and Clerk, with dashboards for doctors and patients. Secured Top 8 for authentication.",
-            tech: "MERN Stack, Clerk",
-            award: "🏆 Top 3",
-            images: [
-                "/tech/medisphere/1.png",
-                "/tech/medisphere/2.png",
-                "/tech/medisphere/3.jpg"
-            ],
-            githubUrl: "https://github.com/Kuladeep-Reddy-C/medisphere",
-            category: "Healthcare"
-        },
-        {
-            title: "Ai Mock Interview",
-            subtitle: "Hospitality Platform",
-            position: "2nd Place",
-            event: "DevX mini-Hackathon",
-            date: "Mar 2025",
-            description: "Designed a resort booking site in 3 hours with ReactJS and Tailwind CSS, comparing past and present designs. Earned 2nd Place for UI design.",
-            tech: "ReactJS, Tailwind CSS",
-            award: "🥈 2nd Place",
-            images: [
-                "/tech/scalar/1.jpg",
-                "/tech/scalar/2.jpg",
-                "/tech/scalar/3.jpg"
-            ],
-            githubUrl: "https://github.com/username/resort-booking",
-            category: "UI/UX"
-        }
-    ];
+  const hackathons = [
+    {
+      title: "HireVerse",
+      subtitle: "AI Based Hiring System for HRs",
+      event: "ABHISARGA'25, IIIT Sri City",
+      date: "Feb 2025",
+      description:
+        "Developed an AI-powered hiring platform using ReactJS and Node.js with dynamic interview question generation using Gemini and LeetCode APIs.",
+      tech: `React.js, Tailwind CSS, Node.js, Express.js, Google Gemini API, Speech-to-Text (STT), Text-to-Speech (TTS), Clerk`,
+      award: "🏅 1st Runner Up",
+      images: [
+        "/tech/abhisarga/1.png",
+        "/tech/abhisarga/2.png",
+        "/tech/abhisarga/3.jpg",
+      ],
+      githubUrl: "https://github.com/VELURIPAVANVIGNESH/AI-MOCK-INTERVIEW",
+      category: "AI / Hiring",
+    },
+    {
+      title: "MediSphere",
+      subtitle: "Smart Healthcare Platform",
+      event: "Technova Hackathon",
+      date: "Mar 2025",
+      description:
+        "Built a smart healthcare management platform using MERN stack and Clerk authentication with dashboards for doctors and patients.",
+      tech: `MERN Stack, Clerk, AI Chat Assistant, Health Report Analysis, Appointment Scheduling, EHR Management, Emergency SOS`,
+      award: "🏆 Top 3",
+      images: [
+        "/tech/medisphere/1.png",
+        "/tech/medisphere/2.png",
+        "/tech/medisphere/3.jpg",
+      ],
+      githubUrl: "https://github.com/VELURIPAVANVIGNESH/MediSphere",
+      category: "Healthcare",
+    },
+    {
+      title: "AI Mock Interview",
+      subtitle: "Interview Preparation Platform",
+      event: "SCALER Hackathon",
+      date: "Mar 2025",
+      description:
+        "Built an AI-powered mock interview platform with real-time feedback and modern UI under strict time constraints.",
+      tech: `React.js, Tailwind CSS, Node.js, Express.js, Google Gemini API, Speech-to-Text (STT), Text-to-Speech (TTS), Clerk`,
 
-    // Auto-advance slideshow
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setImageIndex((prev) => (prev + 1) % hackathons[currentSlide].images.length);
-        }, 3000);
+      award: "🥈 2nd Place",
+      rank: null,
+      images: [
+        "/tech/scalar/1.jpg",
+        "/tech/scalar/2.jpg",
+        "/tech/scalar/3.jpg",
+      ],
+      githubUrl: "https://github.com/VELURIPAVANVIGNESH/AI-MOCK-INTERVIEW",
+      category: "UI / AI",
+    },
+  ];
 
-        return () => clearInterval(interval);
-    }, [currentSlide, hackathons]);
+  // Auto image slider
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImageIndex(
+        (prev) =>
+          (prev + 1) % hackathons[currentSlide].images.length
+      );
+    }, 3000);
 
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % hackathons.length);
-        setImageIndex(0);
-    };
+    return () => clearInterval(interval);
+  }, [currentSlide]);
 
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + hackathons.length) % hackathons.length);
-        setImageIndex(0);
-    };
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % hackathons.length);
+    setImageIndex(0);
+  };
 
-    const nextImage = () => {
-        setImageIndex((prev) => (prev + 1) % hackathons[currentSlide].images.length);
-    };
-
-    const prevImage = () => {
-        setImageIndex((prev) => (prev - 1 + hackathons[currentSlide].images.length) % hackathons[currentSlide].images.length);
-    };
-
-    const currentHackathon = hackathons[currentSlide];
-
-    return (
-        <div className="min-h-screen bg-black text-white py-16 px-8">
-            <div className="max-w-6xl mx-auto">
-                {/* Header */}
-                <div className="text-center mb-16">
-                    <h1 className="text-5xl font-bold mb-4">
-                        <span className="text-white">Hackathon </span>
-                        <span className="text-blue-400">Achievements</span>
-                    </h1>
-                    <p className="text-gray-400 text-lg max-w-4xl mx-auto leading-relaxed">
-                        Competing in hackathons has sharpened my problem-solving skills and ability to deliver under pressure. Here are my recent achievements showcasing innovation and excellence.
-                    </p>
-                </div>
-
-                {/* Main Slideshow */}
-                <div className="relative">
-                    {/* Navigation Arrows */}
-                    <button
-                        onClick={prevSlide}
-                        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/80 hover:bg-black text-blue-400 p-3 rounded-full transition-all duration-300 hover:scale-110"
-                    >
-                        <ChevronLeft size={24} />
-                    </button>
-                    <button
-                        onClick={nextSlide}
-                        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/80 hover:bg-black text-blue-400 p-3 rounded-full transition-all duration-300 hover:scale-110"
-                    >
-                        <ChevronRight size={24} />
-                    </button>
-
-                    {/* Main Card */}
-                    <div className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20">
-                        {/* Image Slideshow Section */}
-                        <div className="relative h-96 overflow-hidden">
-                            {/* Image Navigation */}
-                            <button
-                                onClick={prevImage}
-                                className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full transition-all duration-300"
-                            >
-                                <ChevronLeft size={20} />
-                            </button>
-                            <button
-                                onClick={nextImage}
-                                className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full transition-all duration-300"
-                            >
-                                <ChevronRight size={20} />
-                            </button>
-
-                            {/* Images */}
-                            <div className="relative h-full">
-                                {currentHackathon.images.map((image, index) => (
-                                    <img
-                                        key={index}
-                                        src={image}
-                                        alt={`${currentHackathon.title} - Image ${index + 1}`}
-                                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${index === imageIndex ? 'opacity-100' : 'opacity-0'
-                                            }`}
-                                    />
-                                ))}
-                            </div>
-
-                            {/* Overlay gradient */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
-
-                            {/* Badges */}
-                            <div className="absolute top-4 right-4 bg-blue-500 text-black px-4 py-2 rounded-full text-sm font-semibold">
-                                {currentHackathon.category}
-                            </div>
-                            <div className="absolute top-4 left-4 bg-black/70 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold">
-                                {currentHackathon.award}
-                            </div>
-
-                            {/* Image indicators */}
-                            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                                {currentHackathon.images.map((_, index) => (
-                                    <button
-                                        key={index}
-                                        onClick={() => setImageIndex(index)}
-                                        className={`w-3 h-3 rounded-full transition-all duration-300 ${index === imageIndex ? 'bg-blue-400' : 'bg-white/50'
-                                            }`}
-                                    />
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Content Section */}
-                        <div className="p-8">
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                                {/* Left Column - Main Info */}
-                                <div>
-                                    <h2 className="text-3xl font-bold text-white mb-3">{currentHackathon.title}</h2>
-                                    <h3 className="text-xl text-blue-400 font-semibold mb-4">{currentHackathon.subtitle}</h3>
-
-                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 space-y-3 sm:space-y-0">
-                                        <div className="flex items-center space-x-2">
-                                            <MapPin className="text-blue-400" size={18} />
-                                            <span className="text-blue-400 font-semibold">{currentHackathon.event}</span>
-                                        </div>
-                                        <div className="flex items-center space-x-2 text-gray-400">
-                                            <Calendar size={18} />
-                                            <span>{currentHackathon.date}</span>
-                                        </div>
-                                    </div>
-
-                                    <p className="text-gray-400 leading-relaxed mb-6">{currentHackathon.description}</p>
-                                </div>
-
-                                {/* Right Column - Tech & Actions */}
-                                <div className="flex flex-col justify-between">
-                                    <div>
-                                        <h4 className="text-lg font-semibold text-white mb-3">Technology Stack</h4>
-                                        <div className="bg-gray-800 px-4 py-2 rounded-lg mb-6">
-                                            <span className="text-blue-400">{currentHackathon.tech}</span>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex space-x-4">
-                                        <a
-                                            href={currentHackathon.githubUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 text-black font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
-                                        >
-                                            <Github size={20} />
-                                            <span>View Code</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Slide Indicators */}
-                    <div className="flex justify-center mt-8 space-x-3">
-                        {hackathons.map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() => {
-                                    setCurrentSlide(index);
-                                    setImageIndex(0);
-                                }}
-                                className={`w-4 h-4 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-blue-400' : 'bg-gray-600'
-                                    }`}
-                            />
-                        ))}
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
+  const prevSlide = () => {
+    setCurrentSlide(
+      (prev) => (prev - 1 + hackathons.length) % hackathons.length
     );
+    setImageIndex(0);
+  };
+
+  const nextImage = () => {
+    setImageIndex(
+      (prev) =>
+        (prev + 1) % hackathons[currentSlide].images.length
+    );
+  };
+
+  const prevImage = () => {
+    setImageIndex(
+      (prev) =>
+        (prev - 1 + hackathons[currentSlide].images.length) %
+        hackathons[currentSlide].images.length
+    );
+  };
+
+  const currentHackathon = hackathons[currentSlide];
+
+  const rankColors = {
+    "1st": "from-yellow-400 to-yellow-600",
+    "Top 3": "from-purple-400 to-purple-600",
+  };
+
+  return (
+    <div className="min-h-screen bg-black text-white py-16 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-4">
+            Hackathon <span className="text-blue-400">Achievements</span>
+          </h1>
+          <p className="text-gray-400 max-w-4xl mx-auto">
+            Demonstrating innovation, teamwork, and rapid problem-solving
+            through competitive hackathons.
+          </p>
+        </div>
+
+        <div className="relative">
+          {/* Slide Controls */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-black/80 text-blue-400 p-3 rounded-full"
+          >
+            <ChevronLeft />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-50 bg-black/80 text-blue-400 p-3 rounded-full"
+          >
+            <ChevronRight />
+          </button>
+
+          <div className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+            {/* IMAGE SECTION */}
+            <div className="relative w-full aspect-video bg-black overflow-hidden">
+              {/* Blurred background (BOTTOM) */}
+              <img
+                src={currentHackathon.images[imageIndex]}
+                alt="background"
+                className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 z-0"
+              />
+
+              {/* Main image (MIDDLE) */}
+              <img
+                src={currentHackathon.images[imageIndex]}
+                alt={currentHackathon.title}
+                className="relative z-10 w-full h-full object-contain"
+              />
+
+              {/* Image arrows */}
+              <button
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-black/70 p-2 rounded-full"
+              >
+                <ChevronLeft size={18} />
+              </button>
+              <button
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-black/70 p-2 rounded-full"
+              >
+                <ChevronRight size={18} />
+              </button>
+
+              {/* AWARD BADGE */}
+              <div className="absolute top-4 left-4 z-40 bg-black/70 backdrop-blur-md border border-white/20 text-blue-400 px-4 py-2 rounded-full text-sm">
+                {currentHackathon.award}
+              </div>
+
+              {/* CATEGORY BADGE */}
+              <div className="absolute top-4 right-4 z-40 bg-blue-500 text-black px-4 py-2 rounded-full text-sm font-semibold">
+                {currentHackathon.category}
+              </div>
+
+              {/* RANK BADGE */}
+              {currentHackathon.rank && (
+                <div
+                  className={`absolute bottom-4 left-4 z-50 bg-gradient-to-r ${
+                    rankColors[currentHackathon.rank]
+                  } text-black px-5 py-2 rounded-full text-sm font-bold shadow-lg`}
+                >
+                  🏆 {currentHackathon.rank}
+                </div>
+              )}
+            </div>
+
+            {/* CONTENT */}
+            <div className="p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h2 className="text-3xl font-bold">
+                  {currentHackathon.title}
+                </h2>
+                <h3 className="text-blue-400 text-xl mb-4">
+                  {currentHackathon.subtitle}
+                </h3>
+
+                <div className="flex justify-between mb-4">
+                  <div className="flex items-center gap-2 text-blue-400">
+                    <MapPin size={18} />
+                    {currentHackathon.event}
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-400">
+                    <Calendar size={18} />
+                    {currentHackathon.date}
+                  </div>
+                </div>
+
+                <p className="text-gray-400">
+                  {currentHackathon.description}
+                </p>
+              </div>
+
+              <div className="flex flex-col justify-between">
+                <div>
+                  <h4 className="text-lg font-semibold mb-2">
+                    Technology Stack
+                  </h4>
+                  <div className="bg-gray-800 px-4 py-2 rounded-lg text-blue-400">
+                    {currentHackathon.tech}
+                  </div>
+                </div>
+
+                <a
+                  href={currentHackathon.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 bg-blue-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition"
+                >
+                  <Github />
+                  View Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* SLIDE DOTS */}
+          <div className="flex justify-center mt-8 gap-3">
+            {hackathons.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setCurrentSlide(index);
+                  setImageIndex(0);
+                }}
+                className={`w-4 h-4 rounded-full ${
+                  index === currentSlide
+                    ? "bg-blue-400"
+                    : "bg-gray-600"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default HackathonComponent;

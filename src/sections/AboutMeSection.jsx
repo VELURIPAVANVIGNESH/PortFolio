@@ -1,21 +1,71 @@
-import React from 'react';
+import React from "react";
 
 const AboutMeSection = () => {
-    return (
-        <section id='about' className="px-6 py-16 bg-black text-white">
-            <div className="max-w-6xl mx-auto text-center">
-                <p className="text-lg md:text-3xl text-gray-300 leading-relaxed">
-                    I'm <span className="text-blue-400 font-semibold">Pavan Vignesh</span>, a curious and driven technologist passionate about solving real-world problems through AI. I have authored a research paper on a <span className="text-blue-400">Large Language Model (LLM)-based Nutrition Advisor</span> that provides personalized suggestions for kids, considering their <span className="text-blue-400">location</span> and <span className="text-blue-400">health condition</span>, with an emphasis on interactive usability.
-                </p>
-                <p className="mt-4 text-lg md:text-3xl text-gray-300 leading-relaxed">
-                    My passion lies in applying cutting-edge technologies to build impactful solutions. I thrive in competitive environments and love participating in <span className="text-blue-400">hackathons</span>, where I’ve had the privilege of winning several. I also actively seek opportunities to attend <span className="text-blue-400">technical workshops</span> to expand my knowledge and stay on the pulse of innovation.
-                </p>
-                <p className="mt-4 text-lg md:text-3xl text-gray-300 leading-relaxed">
-                    When I'm not coding or ideating on new projects, I enjoy engaging with communities, exploring advancements in <span className="text-blue-400">AI/ML</span>, and refining my skills to contribute meaningfully to the tech world.
-                </p>
-            </div>
-        </section>
-    );
+  return (
+    <section
+      id="about"
+      className="bg-black text-white px-6 py-24"
+    >
+      <div className="max-w-5xl mx-auto">
+        {/* Section Header */}
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
+          About <span className="text-blue-400">Me</span>
+        </h2>
+
+        {/* Content */}
+        <div className="space-y-8 text-gray-300 text-lg md:text-xl leading-relaxed">
+          <p>
+            I’m{" "}
+            <span className="text-blue-400 font-semibold">
+              Pavan Vignesh
+            </span>
+            , a curious and driven technologist passionate about solving
+            real-world problems using Artificial Intelligence. I have authored
+            a research paper on a{" "}
+            <span className="text-blue-400 font-medium">
+              Large Language Model (LLM)–based Nutrition Advisor
+            </span>{" "}
+            that delivers personalized recommendations for children by
+            considering their{" "}
+            <span className="text-blue-400">location</span> and{" "}
+            <span className="text-blue-400">
+              health conditions
+            </span>
+            , with a strong focus on interactive usability.
+          </p>
+
+          <p>
+            I enjoy applying modern technologies to build meaningful,
+            high-impact solutions. I thrive in competitive environments and
+            actively participate in{" "}
+            <span className="text-blue-400 font-medium">
+              hackathons
+            </span>
+            , where I have earned multiple wins. I also regularly attend{" "}
+            <span className="text-blue-400 font-medium">
+              technical workshops
+            </span>{" "}
+            to broaden my skill set and stay aligned with emerging trends.
+          </p>
+
+          <p>
+            Beyond coding, I enjoy collaborating with tech communities,
+            exploring advancements in{" "}
+            <span className="text-blue-400 font-medium">
+              AI and Machine Learning
+            </span>
+            , and continuously refining my abilities to make a meaningful
+            contribution to the technology ecosystem.
+          </p>
+        </div>
+
+        {/* Subtle Divider */}
+        <div className="mt-12 flex justify-center">
+          <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-emerald-400 rounded-full"></div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default AboutMeSection;

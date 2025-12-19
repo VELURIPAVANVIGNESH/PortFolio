@@ -4,26 +4,50 @@ import { ExternalLink, Github, Award, Calendar, MapPin } from 'lucide-react';
 const ProjectsComponent = () => {
     const projects = [
         {
-            title: "AI Mock Interview",
-            subtitle: "AI assistant for Interview Preparation",
-            description: "An AI-powered mock interview platform with role-based question generation, real-time feedback, performance tracking, and Clerk authentication for personalized, structured preparation.",
-            tech: "MERN Stack",
-            videoUrl: " ",
-            githubUrl: "https://github.com/VELURIPAVANVIGNESH/AI-MOCK-INTERVIEW",
-            liveUrl: "https://ai-mock-interview-qsvj.onrender.com",
-            category: "Full Stack",
-            hasLive: true
-        },
-        {
-            title: "Autonomous Car Project",
-            subtitle: "IoT Solution",
-            description: "A C++-based autonomous vehicle prototype using ultrasonic sensors and Arduino to detect obstacles, navigate paths, and support manual override via serial interface.",
-            tech: "Arduino, C++",
-            videoUrl: "/project2.mp4",
-            githubUrl: "https://github.com/username/lift-safety-system",
-            category: "IoT",
-            hasLive: false
-        },
+    title: "HireVerse",
+    subtitle: "AI-Powered Mock Interview Platform",
+    description: "An AI-driven mock interview platform with role- and experience-based dynamic question generation for DSA, Aptitude, Verbal, and Behavioral rounds. Features include Speech-to-Text, Text-to-Speech, automated scoring, AI feedback, performance analytics, Clerk authentication, and subscription-based premium access with payment integration.",
+    tech: "Full Stack + AI (MERN)",
+    videoUrl: "/public/project1.mp4",
+    githubUrl: "https://github.com/VELURIPAVANVIGNESH/AI-MOCK-INTERVIEW",
+    liveUrl: "https://ai-mock-interview-qsvj.onrender.com",
+    category: "Full Stack",
+    hasLive: true
+},
+{
+    title: "MediSphere",
+    subtitle: "Smart Hospitalization Platform",
+    description: "A smart healthcare platform enabling appointment booking, secure doctor–patient communication, and electronic health record (EHR) management. Includes AI-powered chat assistant, emergency SOS services, pharmacy orders, and automated health report analysis with trend visualization.",
+    tech: "Full Stack + AI",
+    videoUrl: "/public/project2.mp4",
+    githubUrl: "https://github.com/VELURIPAVANVIGNESH/MediSphere",
+    liveUrl: "https://medisphere-f3b4.onrender.com/",
+    category: "Full Stack",
+    hasLive: true
+},
+{
+    title: "Anti-Theft Bag Security System",
+    subtitle: "Smart Embedded Security System",
+    description: "A smart luggage security system built using STM32F401, MPU6050 accelerometer-gyroscope, SW-420 vibration sensor, HC-05 Bluetooth module, and OLED display for real-time monitoring. Integrated a lightweight Decision Tree model to classify motion and vibration patterns, triggering Bluetooth alerts within 150ms upon detecting abnormal activity.",
+    tech: "Embedded Systems + ML",
+    videoUrl: "/public/project3.mp4",
+    githubUrl: "https://github.com/VELURIPAVANVIGNESH/Anti-Theft-Bag-System",
+    liveUrl: "",
+    category: "Embedded / IoT",
+    hasLive: false
+},
+{
+    title: "GeoHealth",
+    subtitle: "Hospital Search & Management System",
+    description: "A high-performance hospital search and management system using R-Tree for geo-based range and nearest-neighbor queries. Implemented prefix-based hospital name and address search using Trie with autocomplete support, prioritized hospitals using MaxHeap based on ratings, and maintained recent search history using Stack.",
+    tech: "DSA",
+    videoUrl:"/public/project4.mp4",
+    githubUrl: "https://github.com/VELURIPAVANVIGNESH/GeoHealth-3rd_SEM",
+    liveUrl: "",
+    category: "DSA",
+    hasLive: false
+}
+
     ];
 
 
